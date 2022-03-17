@@ -25,11 +25,10 @@ let check = document.querySelector('.check').addEventListener('click',function(p
 
         }
     }
-
-    else if(userNum > scrtNum){
-
+    //this area!
+    else if(userNum != scrtNum){
         if(score > 1){
-            document.querySelector('.message').textContent = "High guess";
+            document.querySelector('.message').textContent = userNum >scrtNum ? "High guess" : 'Low guess';
             score--;
             document.querySelector('.label-score').innerHTML = `💯 Score: ${score}`;
         }
@@ -37,19 +36,31 @@ let check = document.querySelector('.check').addEventListener('click',function(p
             document.querySelector('.message').textContent = "Computer won!";
             document.querySelector('.label-score').innerHTML = 'Score : 0';
         }
+    }
+    // else if(userNum > scrtNum){
+
+    //     if(score > 1){
+    //         document.querySelector('.message').textContent = "High guess";
+    //         score--;
+    //         document.querySelector('.label-score').innerHTML = `💯 Score: ${score}`;
+    //     }
+    //     else{
+    //         document.querySelector('.message').textContent = "Computer won!";
+    //         document.querySelector('.label-score').innerHTML = 'Score : 0';
+    //     }
         
-    }
-    else if(userNum < scrtNum){
-        if(score>1){
-            document.querySelector('.message').innerHTML = 'Low guess';
-            score--;
-            document.querySelector('.label-score').innerHTML = `💯 Score: ${score}`;
-        }
-        else{
-            document.querySelector('.message').textContent = "Computer won!";
-            document.querySelector('.label-score').innerHTML = 'Score : 0';
-        }
-    }
+    // }
+    // else if(userNum < scrtNum){
+    //     if(score>1){
+    //         document.querySelector('.message').innerHTML = 'Low guess';
+    //         score--;
+    //         document.querySelector('.label-score').innerHTML = `💯 Score: ${score}`;
+    //     }
+    //     else{
+    //         document.querySelector('.message').textContent = "Computer won!";
+    //         document.querySelector('.label-score').innerHTML = 'Score : 0';
+    //     }
+    // }
 }) 
 
 let again = document.querySelector('.again').addEventListener('click',function(){
