@@ -75,3 +75,4 @@ let again = document.querySelector('.again').addEventListener('click',function()
     document.querySelector('.number').style.width = '15rem';
     document.querySelector('.number').innerHTML = "?"
 });
+``
