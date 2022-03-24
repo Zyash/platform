@@ -15,9 +15,12 @@ for(let i=0;i<show.length;i++){
         close.addEventListener('click', overLay)
         overlay.addEventListener('click',overLay);
 }
-
+document.addEventListener('keydown',function (e) {
+    if(e.key==='Escape'){
+        overLay();
+    }
+})
 function overLay() {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
 }
-
